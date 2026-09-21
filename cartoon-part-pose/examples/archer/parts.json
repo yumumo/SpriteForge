@@ -1,0 +1,25 @@
+{
+  "id": "archer",
+  "granularity": "medium",
+  "split_mode": "semantic",
+  "facing_default": "right",
+  "parts": [
+    { "id": "head", "label": "头+棕发+尖耳+紫眼（包在头内）", "side": "C" },
+    { "id": "torso", "label": "靛蓝兜帽斗篷金边 + 皮胸带", "side": "C" },
+    { "id": "arm_upper_L", "label": "左上臂", "side": "L" },
+    { "id": "arm_lower_L", "label": "左前臂持弓", "side": "L" },
+    { "id": "hand_L", "label": "左手握弓把", "side": "L" },
+    { "id": "arm_upper_R", "label": "右上臂后引", "side": "R" },
+    { "id": "arm_lower_R", "label": "右前臂拉弦", "side": "R" },
+    { "id": "hand_R", "label": "右手拉弦", "side": "R" },
+    { "id": "leg_upper_L", "label": "左大腿", "side": "L" },
+    { "id": "leg_lower_L", "label": "左小腿", "side": "L" },
+    { "id": "foot_L", "label": "左棕靴", "side": "L" },
+    { "id": "leg_upper_R", "label": "右大腿", "side": "R" },
+    { "id": "leg_lower_R", "label": "右小腿", "side": "R" },
+    { "id": "foot_R", "label": "右棕靴", "side": "R" },
+    { "id": "prop_bow", "label": "木弯弓；弓木与弦之间必须透明", "side": "L", "notes": "禁止白/灰填弓内三角" },
+    { "id": "deco_quiver", "label": "背后箭袋白羽", "side": "C" },
+    { "id": "deco_cloak", "label": "斗篷下摆", "side": "C" }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cartoon-part-pose-parts",
+  "title": "CartoonPartPoseParts",
+  "type": "object",
+  "required": ["id", "granularity", "split_mode", "parts"],
+  "properties": {
+    "id": { "type": "string", "description": "Character id" },
+    "granularity": {
+      "type": "string",
+      "enum": ["medium", "fine"],
+      "default": "medium"
+    },
+    "split_mode": {
+      "type": "string",
+      "enum": ["semantic", "cutout"],
+      "default": "semantic",
+      "description": "semantic = name list + refs; cutout = only when user asks real PNG parts"
+    },
+    "facing_default": {
+      "type": "string",
+      "enum": ["left", "right", "three_quarter"]
+    },
+    "scale_ref": {
+      "type": "string",
+      "description": "Path to ruler frame image (e.g. run0)"
+    },
+    "keyframes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Map action or pose name → approved freeze-frame path"
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "side": { "type": "string", "enum": ["L", "R", "C"] },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

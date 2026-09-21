@@ -1,0 +1,21 @@
+id: archer
+display_name: 游侠
+style: chibi cel-shaded, bold black outlines
+silhouette: "large head, slim short body, about 2.5 heads tall"
+palette:
+  - brown hair
+  - indigo-navy hood and cloak with gold trim
+  - brown leather belts, bracers, boots
+  - purple eyes
+face_lock: "round chibi face, large purple eyes with white shine, messy brown hair, pointed elf ears"
+signature:
+  - hooded indigo cloak gold trim
+  - wooden recurve bow
+  - quiver of white-fletched arrows on back
+forbid:
+  - redesign face or outfit
+  - mage staff or hat
+  - scene, castle, ground plane
+  - shrink whole body to fake a pose
+facing_default: right
+reference_portrait: .local/cursor-project/assets/characters/archer/archer-portrait.png
