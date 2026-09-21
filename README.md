@@ -1,23 +1,64 @@
-# core/skills · 产品通用技能目录
+# SpriteForge
 
-本目录存放 **跨产品、可给所有用户复用** 的 Agent Skill（不绑单一游戏 / 单一 Core）。
+**SpriteForge** 是一个通用的 2D AI 动画生成工业管线，专为创建高质量的角色动画和 Sprite Sheets 而设计。
 
-| 约定 | 说明 |
-|---|---|
-| 布局 | `core/skills/<skill-name>/SKILL.md` + 可选 `references/` |
-| 读者 | Coding Agent、办事助手、美术管线均可；正文避免写死单一工具链 |
-| 与 `.cursor/skills` | 框架/仓内 Coding 专属仍放 `.cursor/skills`；通用创意/美术流程放此处 |
-| 与 `.xrk/skills` / 工作区 | 办事助手种子与用户工作区技能；需要时可由 SkillHub 或文档指引同步/安装本目录技能 |
-| 与 `core/<产品>/` | 产品业务码仍在各自 Core；本目录 **只** 放技能文案与轻量模板 |
+## 🎯 项目概述
 
-## 当前技能
+SpriteForge 解决了 AI 生成动画帧时常见的"比例漂移"和"逻辑回放"问题，提供了一套标准化的动画制作流程。
 
-| 名 | 用途 |
-|---|---|
-| [`cartoon-part-pose`](cartoon-part-pose/SKILL.md) | 语义拆件 + 定格/sheet；尺子帧优先；关键定格锁表；失败分类重生 |
+### 核心特性
 
-> **注意**：若需让全局 AI Agent 自动发现本目录的新技能，请确保将本目录下的技能名称和 `description` 补充到主索引文件（如 `.cursor/skills/SKILL_INDEX.md`）或全局 Agent 的系统提示词配置中。
+- **语义拆件（Parts）**：将角色按部位进行语义化拆分
+- **立绘锚定**：确保角色身份一致性
+- **姿势配方**：标准化的动作生成流程
+- **标准化 Sprite Sheet 锻造**：生成可直接用于游戏引擎的动画表
+- **严格的 Schema 自检**：保证输出质量
+- **标准适配器接口**：可轻松对接任意游戏引擎执行器
 
-## 入库注意
+## 🚀 使用场景
 
-根 `.gitignore` 默认 `core/*` 仅白名单 `system-Core`。若本目录要进主仓给所有克隆用户，需单独白名单 `core/skills/`（由维护者确认后改 `.gitignore`）。
+- 创建一致性极高的角色动作
+- 生成可用于游戏的 Sprite Sheets
+- 需要标准化动画帧的项目
+- 2D 动画制作流程自动化
+
+## 🔧 工作流程
+
+1. **立绘准备**：已有扫描图或生成新立绘
+2. **语义拆件**：按部位拆分角色
+3. **尺子帧设定**：建立统一的比例参考
+4. **姿势定义**：使用配方定义动作
+5. **动画生成**：一次性生成完整的动作表
+6. **质量验收**：确保动作连贯性和比例一致性
+7. **执行器集成**：将结果接入游戏引擎
+
+## 📁 目录结构
+
+```
+SpriteForge/
+├── cartoon-part-pose/     # 主要功能模块
+│   ├── SKILL.md           # 核心使用文档
+│   ├── examples/          # 示例文件
+│   ├── references/        # 参考文档
+│   └── tools/             # 工具脚本
+└── _template/             # 模板文件
+```
+
+## 📚 相关文档
+
+- [主要使用文档](cartoon-part-pose/SKILL.md)
+- [语义拆件规范](cartoon-part-pose/references/part-taxonomy.md)
+- [姿势配方](cartoon-part-pose/references/pose-recipes.md)
+- [参考模板](cartoon-part-pose/references/identity-template.md)
+
+## 📝 使用说明
+
+请参考 `cartoon-part-pose/SKILL.md` 获取详细的使用方法和工作流程。
+
+## 🤝 贡献
+
+欢迎提出改进建议和贡献代码！
+
+## 📄 许可证
+
+MIT License
