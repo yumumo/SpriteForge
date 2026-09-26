@@ -1,0 +1,259 @@
+# 骨骼动作预设配方
+# 用于 SpriteForge 中快速生成标准动作
+
+# ==================== 动作预设 ====================
+# 跑步动作预设
+run:
+  description: "标准跑步动作，适用于角色移动"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, mid-run. Spine lean forward slightly.
+    Left leg forward contact, right leg back. Right arm forward, left arm back.
+    Hold prop_bow in left hand at waist, string toward body. Full body, no crop.
+  keyframe: "run0"
+  angle: "side"
+
+# 跳跃动作预设
+jump:
+  description: "标准跳跃动作，包括起跳、腾空和落地"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, jumping. 
+    Legs bent at knees, body in air. Arms positioned for balance.
+    Spine stretched upward during jump. Feet leaving ground.
+    Full body, no crop.
+  keyframe: "jump_peak"
+  angle: "side"
+
+# 攻击动作预设
+attack:
+  description: "标准攻击动作，包括蓄力、攻击和收回"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, attacking.
+    Right arm extended forward with bow string pulled back.
+    Left arm holding bow handle. Body slightly leaned forward.
+    Prop_bow held properly with string tension.
+    Full body, no crop.
+  keyframe: "atk_full_draw"
+  angle: "side"
+
+# 待机动作预设
+idle:
+  description: "标准待机站立动作，放松自然的站立姿态"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, idle.
+    Feet shoulder-width apart. Spine straight. Arms relaxed at sides.
+    Head upright, eyes looking forward. Natural breathing posture.
+    Full body, no crop.
+  keyframe: "idle_stand"
+  angle: "side"
+
+# 蹲伏动作预设
+crouch:
+  description: "标准蹲伏动作，用于低姿态或躲避"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, crouching.
+    Knees bent, body lowered. Arms relaxed or positioned for quick movement.
+    Head slightly lowered. Weight shifted forward.
+    Full body, no crop.
+  keyframe: "crouch_low"
+  angle: "side"
+
+# 飞行动作预设
+fly:
+  description: "标准飞行动作，包括翅膀展开和滑翔姿态"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, flying.
+    Arms spread wide, wings extended. Body in streamlined position.
+    Hair and cloak flowing backward. Eyes looking forward.
+    Full body, no crop.
+  keyframe: "fly_gliding"
+  angle: "side"
+
+# 走路动作预设
+walk:
+  description: "标准走路动作，比跑步慢但更稳定"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, walking.
+    Left leg forward, right leg back. Arms swinging naturally.
+    Spine straight. Body slightly leaning forward.
+    Full body, no crop.
+  keyframe: "walk0"
+  angle: "side"
+
+# 滚动动作预设
+roll:
+  description: "滚动动作，用于快速移动或躲避"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, rolling.
+    Body curled into a ball. Arms wrapped around body.
+    Legs tucked in. Direction of movement indicated by body angle.
+    Full body, no crop.
+  keyframe: "roll_start"
+  angle: "side"
+
+# 跳跃攻击动作预设
+jump_attack:
+  description: "跳跃攻击动作，结合跳跃和攻击"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, jumping attack.
+    Body in air with legs extended. Right arm extended forward with bow string pulled back.
+    Left arm holding bow handle. Body slightly leaned forward.
+    Prop_bow held properly with string tension.
+    Full body, no crop.
+  keyframe: "jump_atk_peak"
+  angle: "side"
+
+# 翻滚动作预设
+flip:
+  description: "翻滚动作，用于空中翻转"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, flipping.
+    Body in air with legs and arms positioned for rotation.
+    Spine curved during rotation. Arms extended or tucked.
+    Full body, no crop.
+  keyframe: "flip_mid"
+  angle: "side"
+
+# ==================== 表情预设 ====================
+# 微笑表情预设
+smile:
+  description: "微笑表情，表示愉快或友好"
+  pose_recipe: |
+    Pose: front-view, smiling expression.
+    Mouth curved upward. Eyes slightly narrowed. Cheeks slightly raised.
+    Head in neutral position. Full body, no crop.
+  keyframe: "smile_face"
+  angle: "front"
+
+# 哭泣表情预设
+cry:
+  description: "哭泣表情，表示悲伤或难过"
+  pose_recipe: |
+    Pose: front-view, crying expression.
+    Tears visible. Mouth downturned. Eyes watery.
+    Shoulders slightly slumped. Full body, no crop.
+  keyframe: "cry_face"
+  angle: "front"
+
+# 生气表情预设
+angry:
+  description: "生气表情，表示愤怒或不满"
+  pose_recipe: |
+    Pose: front-view, angry expression.
+    Brow furrowed. Mouth in frown. Eyes narrowed.
+    Body tense. Full body, no crop.
+  keyframe: "angry_face"
+  angle: "front"
+
+# 眨眼表情预设
+wink:
+  description: "眨眼表情，表示调皮或暗示"
+  pose_recipe: |
+    Pose: front-view, winking expression.
+    One eye closed. Mouth slightly open. Eye with eyelid closed.
+    Full body, no crop.
+  keyframe: "wink_face"
+  angle: "front"
+
+# 惊讶表情预设
+surprised:
+  description: "惊讶表情，表示震惊或意外"
+  pose_recipe: |
+    Pose: front-view, surprised expression.
+    Eyes wide open. Mouth in O shape. Eyebrows raised.
+    Full body, no crop.
+  keyframe: "surprised_face"
+  angle: "front"
+
+# 思考表情预设
+thinking:
+  description: "思考表情，表示沉思或犹豫"
+  pose_recipe: |
+    Pose: front-view, thinking expression.
+    Hand on chin. Eyebrows slightly furrowed. Eyes looking up.
+    Mouth slightly open. Full body, no crop.
+  keyframe: "thinking_face"
+  angle: "front"
+
+# ==================== 姿态预设 ====================
+# 呼吸动态预设
+breathing:
+  description: "待机状态下的呼吸动态，表现自然生命感"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, breathing.
+    Slight rise and fall of chest. Arms relaxed at sides.
+    Head slightly nodding with breath. Natural posture.
+    Full body, no crop.
+  keyframe: "breath_idle"
+  angle: "side"
+
+# 撩头发预设
+hair_flip:
+  description: "撩头发动作，表现角色的自信或调皮"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, hair flip.
+    One hand brushing hair away from face. Head slightly tilted.
+    Eyes looking forward. Natural expression.
+    Full body, no crop.
+  keyframe: "hair_flip"
+  angle: "side"
+
+# 搭肩预设
+shoulder_tap:
+  description: "搭肩动作，表示友好或鼓励"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, shoulder tap.
+    One hand on shoulder of another character. Body leaning slightly.
+    Friendly expression. Full body, no crop.
+  keyframe: "shoulder_tap"
+  angle: "side"
+
+# 挥手预设
+wave:
+  description: "挥手动作，表示打招呼或告别"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, waving.
+    One arm raised and waving. Other arm relaxed.
+    Friendly expression. Full body, no crop.
+  keyframe: "wave_hand"
+  angle: "side"
+
+# 背手预设
+hands_behind_back:
+  description: "背手站立，表现自信或思考"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, hands behind back.
+    Both hands behind back. Body upright. Eyes looking forward.
+    Full body, no crop.
+  keyframe: "hands_behind_back"
+  angle: "side"
+
+# ==================== 多角度支持 ====================
+# 正面视角预设
+front_view:
+  description: "正面视角标准姿势"
+  pose_recipe: |
+    Pose: front-view, standard stance.
+    Feet shoulder-width apart. Arms relaxed at sides.
+    Head upright. Full body, no crop.
+  keyframe: "front_stance"
+  angle: "front"
+
+# 侧面视角预设
+side_view:
+  description: "侧面视角标准姿势"
+  pose_recipe: |
+    Pose: side-view facing RIGHT, standard stance.
+    Feet shoulder-width apart. Arms relaxed at sides.
+    Head upright. Full body, no crop.
+  keyframe: "side_stance"
+  angle: "side"
+
+# 后面视角预设
+back_view:
+  description: "背面视角标准姿势"
+  pose_recipe: |
+    Pose: back-view, standard stance.
+    Feet shoulder-width apart. Arms relaxed at sides.
+    Head upright. Full body, no crop.
+  keyframe: "back_stance"
+  angle: "back"
